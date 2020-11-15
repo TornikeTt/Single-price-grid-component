@@ -1,0 +1,169 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: 0px;
+}
+
+body{
+    font-family: 'Karla', sans-serif;
+    background-color:hsl(204, 27%, 89%);
+    overflow: hidden;
+}
+
+.conteiner{
+    display:grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 115px);
+}
+
+.up{
+    background-color: white;
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    border-radius:10px;
+}
+.up-inside{
+    width:90%;
+    height:80%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    margin:auto;
+}
+.up-inside h1{
+    color: hsl(179, 62%, 43%);
+    font-weight: bold;
+}
+
+.up-inside h3{
+    margin-top: 10px;
+    color:hsl(71, 73%, 54%);
+}
+
+.up-inside p{
+    color:hsl(218, 22%, 67%);
+    font-size: 19px;
+}
+
+/* down left start*/
+.down-left{
+    background-color: hsl(179, 62%, 43%);
+    grid-column-start: 3;
+    grid-column-end:5;
+    grid-row-start:4;
+    grid-row-end:6;
+}
+.down-left-inside{
+    width: 75%;
+    height: 85%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin:10px auto;
+}
+.down-left-inside h3{
+    color:white;
+}
+.per-month{
+    display:flex;
+    align-items: center;
+}
+.per-month h2{
+    color:white;
+}
+.per-month p{
+    color:hsl(216, 26%, 81%);
+    font-weight: bold;
+    margin-left: 4px;
+}
+.p{
+    color:white;
+}
+button{
+    font-size: 20px;
+    height: 40px;
+    width:250px;
+    background-color:hsl(71, 73%, 54%);
+    border-radius: 8px;
+    color:white;
+    border:none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+/* down left end*/
+
+/* down right start*/
+
+.down-right{
+    background-color:hsl(179, 39%, 58%);
+    grid-column-start:5;
+    grid-column-end:7;
+    grid-row-start: 6;
+    grid-row-end: 4;
+}
+
+.down-right-inside{
+    width:80%;
+    height:90%;
+    display:flex;
+    flex-direction:column;
+    margin:20px auto;
+}
+.down-right-inside h2{
+    color:whitesmoke;
+}
+.down-right-paragraph{
+    margin-top: 15px;
+    color: white;
+}
+
+
+/* down right end*/
+
+
+@media(max-width: 375px){
+    body{
+        overflow:auto;
+    }
+    .conteiner{
+        grid-template-rows: repeat(10, 115px);
+    }
+    /*up start*/
+    .up{
+        grid-row-start:2;
+        grid-row-end: 4;
+        grid-column-start:2;
+        grid-column-end:8;
+        border-radius:0px;
+    }
+    .up-inside h1{
+        font-size: 18px;
+    }
+    .up-inside h3 , .up-inside p  {
+        font-size: 15px;
+    }
+    /*up end*/
+
+    /*down left start*/
+    .down-left{
+        grid-row-start:4;
+        grid-row-end: 6;
+        grid-column-start:2;
+        grid-column-end:8;
+    }
+
+    .down-left-inside{
+        width: 90%;
+    }
+    /*down left end*/
+    .down-right{
+        grid-row-start:6;
+        grid-row-end: 8;
+        grid-column-start:2;
+        grid-column-end:8;
+    }
+
+
+}
